@@ -1,70 +1,59 @@
-# MPG HAL Component
+## MPG HAL Component
 
-**NAME**
-mpg − 4 axis MPG with multiplexed axis and increment selector switches
+### NAME  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mpg − 4 axis MPG with multiplexed axis and increment selector switches
 
-**SYNOPSIS**
-                                      loadrt mpg[count=N|names=name1[,name2...]]
-**FUNCTIONS**
-mpg.N
+### SYNOPSIS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; loadrt mpg[count=N|names=name1[,name2...]]
 
-**PINS**
+### FUNCTIONS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_
 
-mpg.N.axis0 bit in
-Input from out0 of the axis selection switch
-mpg.N.axis1 bit in
-Input from out1 of the axis selection switch
-mpg.N.scale0 bit in
-Input from out0 of the scale selection switch
-mpg.N.scale1 bit in
-Input from out1 of the scale selection switch
+### PINS  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.axis0** bit in  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input from out0 of the axis selection switch  
 
-mpg.N.mpg_scale float out
-Outputs selected mpg scale
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.axis1** bit in  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input from out1 of the axis selection switch
 
-mpg.N.enable-x bit out
-TRUE if x-axis is selected (axis0=FALSE and axis1=FALSE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.scale0** bit in  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input from out0 of the scale selection switch
 
-mpg.N.enable-y bit out
-TRUE if y-axis is selected (axis0=TRUE and axis1=FALSE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.scale1** bit in  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input from out1 of the scale selection switch
 
-mpg.N.enable-z bit out
-TRUE if z-axis is selected (axis0=FALSE and axis1=TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.mpg_scale** float out  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Outputs selected mpg scale
 
-mpg.N.enable-a bit out
-TRUE if a-axis is selected (axis0=TRUE and axis1=TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.enable-x** bit out  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _TRUE_ if x-axis is selected (**axis0**=_FALSE_ and **axis1**=_FALSE_)
 
-PARAMETERS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.enable-y** bit out  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _TRUE_ if y-axis is selected (**axis0**=_TRUE_ and **axis1**=_FALSE_)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.enable-z** bit out  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _TRUE_ if z-axis is selected (**axis0**=_FALSE_ and **axis1**=_TRUE_)
 
-mpg.N.mpg-scale1 float rw (default: .01)
-Desired jog scale for first increment switch position
-mpg.N.mpg-scale2 float rw (default: .001)
-Desired jog scale for second increment switch position
-mpg.N.mpg-scale3 float rw (default: .0001)
-Desired jog scale for third increment switch position
-mpg.N.mpg-scale4 float rw (default: .00001)
-Desired jog scale for fourth increment switch position
-mpg.N.mpg_pulses s32 rw (default: 4)
-Number of pulses per MPG detent
-LICENSE
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.enable-a** bit out  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _TRUE_ if a-axis is selected (**axis0**=_TRUE_ and **axis1**=_TRUE_)
 
+### PARAMETERS  
 
-GPL
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.mpg-scale1** float rw (default: _.01_)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desired jog scale for first increment switch position  
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.mpg-scale2** float rw (default: _.001_)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desired jog scale for second increment switch position  
 
-Installing the MPG HAL Component
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.mpg-scale3** float rw (default: _.0001_)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desired jog scale for third increment switch position  
 
-The mpg.comp file can be downloaded at the bottom of this page. If you have the LinuxCNC development packages the easiest way to install it is to say
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.mpg-scale4** float rw (default: _.00001_)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desired jog scale for fourth increment switch position  
 
-        sudo halcompile --install mpg.comp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **mpg.**_N_**.mpg_pulses** s32 rw (default: 4)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Number of pulses per MPG detent  
 
-while in the directory where mpg.comp is located.
+### LICENSE
 
-
-If you don't have the LinuxCNC development packages you can install them by saying
-
-        sudo apt-get install linuxcnc-dev
-
-
-You could also just place the precompiled mpg.ko file found at the bottom of this page in you LinuxCNC components folder.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GPL
