@@ -1,0 +1,77 @@
+component mpg "4 axis MPG";
+description """4 axis MPG with 4 selectable user defined jog scales. Multiplexed to require 4 total input pins for axis and scale selections.""";
+notes """Switches should be multiplexed with two diodes so that the outputs are as follows:
+
+Position 1: out0=0 out1=0
+Position 2: out0=1 out1=0
+Position 3: out0=0 out1=1
+Position 4: out0=1 out1=1
+
+Where out0 and out1 are conected to axis0 and axis1, or scale0 and scale1, as the case may be.""";
+
+license "GPL";
+author "Kurt Jacobson";
+function _;
+
+//Input from multiplexed axis select switch
+pin in bit axis0;
+pin in bit axis1;
+
+//Input from multiplexed scale select switch
+pin in bit scale0;
+pin in bit scale1;
+
+//Selectable jog scale values 
+param rw float mpg_scale1=.01;
+param rw float mpg_scale2=.001;
+param rw float mpg_scale3=.0001;
+param rw float mpg_scale4=.00001;
+
+//MPG pulses per detent 
+param rw float mpg_pulses=4;
+
+//Demuxed axis selection
+pin out bit enable_x;
+pin out bit enable_y;
+pin out bit enable_z;
+pin out bit enable_a;
+
+//Demuxed mpg scale
+pin out float mpg_scale;
+
+;;
+FUNCTION(_){
+    //Demux axis selection
+    if (!axis0 && !axis1) {
+        enable_x = 1;
+        enable_y = 0;
+        enable_z = 0;
+        enable_a = 0;
+    } else if (axis0 && !axis1) {
+        enable_x = 0;
+        enable_y = 1;
+        enable_z = 0;
+        enable_a = 0;
+    } else if (!axis0 && axis1) {
+        enable_x = 0;
+        enable_y = 0;
+        enable_z = 1;
+        enable_a = 0;
+    } else if (axis0 && axis1) {
+        enable_x = 0;
+        enable_y = 0;
+        enable_z = 0;
+        enable_a = 1;
+    }
+
+    //Demux mpg scale selection
+    if (!scale0 && !scale1) {
+        mpg_scale = mpg_scale1/mpg_pulses;
+    } else if (scale0 && !scale1) {
+        mpg_scale = mpg_scale2/mpg_pulses;
+    } else if (!scale0 && scale1) {
+        mpg_scale = mpg_scale3/mpg_pulses;
+    } else if (scale0 && scale1) {
+        mpg_scale = mpg_scale4/mpg_pulses;
+    }
+}
