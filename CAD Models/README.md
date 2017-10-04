@@ -13,7 +13,8 @@ I may be able to provide other CAD formats upon request. [Open an Issue][1]
 and I will see what I can do for you.
 
 
-**Note** You should Download this entire folder so the part relations stay intact. 
+**Note** You should Download this entire folder so the part relations stay intact.
 
+![RF45 CAD Model Assy](RF45%20Mill%20Rev.png)
 
 [1]: https://github.com/KurtJacobson/RF45-CNC/issues/new
