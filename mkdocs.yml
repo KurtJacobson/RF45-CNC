@@ -1,0 +1,43 @@
+site_name: RF45-CNC
+site_description: RF45 CNC Conversion
+site_url: https://kurtjacobson.github.io/RF45-CNC/
+
+repo_name: KurtJacobson/RF45-CNC
+repo_url: https://github.com/KurtJacobson/RF45-CNC/
+
+site_author: Kurt Jacobson
+copyright: Copyright &copy; 2017  Kurt Jacobson
+
+theme: material
+
+pages:
+- Home: index.md
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite(guess_lang=false, linenums=true)
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc(permalink=true)
+  - pymdownx.arithmatex
+  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist(custom_checkbox=true)
+  - pymdownx.tilde
+
+
+extra:
+  palette:
+    primary: Grey
+    accent: Blue
