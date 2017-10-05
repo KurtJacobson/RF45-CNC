@@ -12,6 +12,7 @@ theme: material
 
 pages:
 - Home: index.md
+- CAD Models: cad.md
 
 # Extensions
 markdown_extensions:
