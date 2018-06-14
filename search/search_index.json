@@ -1,0 +1,34 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "RF45 CNC Conversion\n\n\n\n\nI will be moving all the CAD and other files from my \nGoogle drive\n site to here.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#rf45-cnc-conversion", 
+            "text": "I will be moving all the CAD and other files from my  Google drive  site to here.", 
+            "title": "RF45 CNC Conversion"
+        }, 
+        {
+            "location": "/cad/", 
+            "text": "CAD Models\n\n\nAll CAD models and drawings were made using SolidWorks 16-17. \n\n\nCAD Archives\n\n\nThese are archives that I have made for various people over time. They may not\nbe up to date. If you can use SolidWorks files then you should download from \nthe \nSolidWorks Modles\n directory.\n\n\nCAD archives are available in these formats:\n\n\n\n\nSolidWorks 16-17\n\n\nFusion 360\n\n\nSTEP\n\n\nIGS\n\n\n\n\nThese files are located in the \nCAD Models/CAD Archives\n directory.\n\n\nI may be able to provide other CAD formats upon request. \nOpen an Issue\n\nand I will see what I can do for you.\n\n\nSolidWorks Models\n\n\nThis is my working directory and has the most up to date models. There are two\nsubdirectories, one contains the models of the main castings pre-conversion, and\nbefore any modifications. The other contains the models of the converted machine.\n\n\nThese files are located in the \nCAD Models/SolidWorks Models\n directory and\nare all in SolidWorks 16-17 format.", 
+            "title": "CAD Models"
+        }, 
+        {
+            "location": "/cad/#cad-models", 
+            "text": "All CAD models and drawings were made using SolidWorks 16-17.", 
+            "title": "CAD Models"
+        }, 
+        {
+            "location": "/cad/#cad-archives", 
+            "text": "These are archives that I have made for various people over time. They may not\nbe up to date. If you can use SolidWorks files then you should download from \nthe  SolidWorks Modles  directory.  CAD archives are available in these formats:   SolidWorks 16-17  Fusion 360  STEP  IGS   These files are located in the  CAD Models/CAD Archives  directory.  I may be able to provide other CAD formats upon request.  Open an Issue \nand I will see what I can do for you.", 
+            "title": "CAD Archives"
+        }, 
+        {
+            "location": "/cad/#solidworks-models", 
+            "text": "This is my working directory and has the most up to date models. There are two\nsubdirectories, one contains the models of the main castings pre-conversion, and\nbefore any modifications. The other contains the models of the converted machine.  These files are located in the  CAD Models/SolidWorks Models  directory and\nare all in SolidWorks 16-17 format.", 
+            "title": "SolidWorks Models"
+        }
+    ]
+}
