@@ -3,5 +3,8 @@
 # RF45-CNC
 Documentation, CAD models and LinuxCNC configs for ENCO RF45 CNC conversion
 
+**Build Photo Album:**
+https://goo.gl/photos/A5knVXhwu5FXMWHDA
+
 **CNCzone Build Thread:**
 http://www.cnczone.com/forums/rf-45-clone-mill/326994-cnc-cad-engineering.html
